@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="in">Inicio de X:</label>
+    <input type="number" name="in" id="in">
+    <br>
+    <label for="fm">Fim de X:</label>
+    <input type="number" name="fm" id="fm">
+    <br>
+    <input type="button" value="Botão-a" onclick="CA()">
+    <input type="button" value="Botão-b" onclick="CB()">
+    <input type="button" value="Botão-c" onclick="CC()">
+    <input type="button" value="Botão-d" onclick="CD()">
+    <input type="button" value="Botão-e" onclick="CE()">
+    <br>
+    <label for="resultado"></label>
+    <span id="resultado"></span>
+    <script>
+        function CA() {
+            let i = parseInt(document.getElementById("in").value);
+            let f = parseInt(document.getElementById("fm").value);
+            let resp = "";
+            for (let x = i; x <= f; x++) {
+                resp = resp + ((3 * (x ** 2)) + 1) + "<br>";
+            }
+            document.getElementById("resultado").innerHTML = resp;
+        }
+        function CB() {
+            let i = parseInt(document.getElementById("in").value);
+            let f = parseInt(document.getElementById("fm").value);
+            let resp = "";
+            for (let x = i; x <= f; x++) {
+                resp = resp + Math.sqrt((x ** 2) + 7) + "<br>";
+            }
+            document.getElementById("resultado").innerHTML = resp;
+        }
+    </script>
+</body>
+</html>

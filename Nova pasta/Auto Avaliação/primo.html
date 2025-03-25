@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p><h1>AAAAAA</h1></p>
+    <label for="nu">Número:</label>
+    <input type="number" name="nu" id="nu">
+    <br>
+    <input type="button" value="Resposta" onclick="Calcular()">
+    <br>
+    <label for="resp">Resposta:</label>
+    <span id="resp"></span>
+    <script>
+        function Calcular() {
+            let n = parseInt(document.getElementById("nu").value);
+            let ca = 0;
+            let res = "";
+            for (let i = 0; i <= n; i++) {
+                if (n % i === 0) {
+                    ca++;
+                }
+                if (ca === 2) {
+                    res = "É primo"
+                }
+                else {
+                    res = "Não é primo"
+                }
+            }
+            document.getElementById("resp").textContent = res;
+        }
+    </script>
+</body>
+
+</html>

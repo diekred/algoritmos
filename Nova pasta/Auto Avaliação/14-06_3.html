@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="string">Escreva uma frase:</label>
+    <input type="text" id="string">
+    <button onclick="retirar()">Retirar Vogais</button>
+    <br>
+    <br>
+    <div id="resp"></div>
+    <script>
+        function retirar() {
+            let frase = document.getElementById("string").value;
+            let resp = "";
+            let letra = "";
+            for (let i = 0; i < frase.length; i++) {
+                letra = frase.charAt(i);
+                if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+
+                } else {
+                    resp += letra;
+                }
+            }
+            document.getElementById("resp").innerHTML = resp;
+        }
+    </script>
+</body>
+
+</html>

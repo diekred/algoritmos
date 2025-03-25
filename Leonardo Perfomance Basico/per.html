@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CRUD Alunos</title>
+   <link rel="stylesheet" href="Mobs">
+</head>
+
+<body>
+
+   <h1>Cadastro de Alunos</h1>
+   <br> <br>
+   <label for="RA">RA:</label>
+   <input type="text" name="RA" id="RA">
+   <input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+   <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+   <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+   <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+   <br><br>
+
+   <label for="inputNome">Nome do aluno:</label>
+   <input type="text" name="inputNome" id="inputNome">
+   <br>
+   <label for="inputDataNascimento">Data de Nascimento:</label>
+   <input type="date" name="inputDataNascimento" id="inputDataNascimento">
+   <br>
+   <label for="livre">Nota do CRUD basico de tema livre:</label>
+   <input type="number" name="livre" id="livre">
+   <br>
+   <label for="inovacao">Nota da inovação do CRUD de tema livre:</label>
+   <input type="number" name="inovacao" id="inovacao">
+   <br>
+   <label for="performance">Nota do CRUD basico de performance:</label>
+   <input type="number" name="performance" id="performance">
+   <br>
+   <label for="Q2">Nota da questão 2 do CRUD de performance:</label>
+   <input type="number" name="Q2" id="Q2">
+   <br>
+   <label for="Q3">Nota da questão 3 do CRUD de performance:</label>
+   <input type="number" name="Q3" id="Q3">
+   <br>
+   <br>
+   <input type="button" value="Salvar dados da lista" id="btSalvarPer" onclick="prepararESalvarCSV()" style="display:inline;">
+   <input type="button" value="Adicionar dados na lista" id="btAdicionarPer" onclick="abrirArquivoSalvoEmLocalPermanente()" style="display:inline;">
+   <br>
+   <label for="Calcular B4">Nota do 4º bimestre dos alunos:</label> <input type="button" value="Calcular B4" onclick="CalcularQ2()">
+   <label for="Calcular Média">Média da Turma:</label> <input type="button" value="Calcular Média" onclick="CalcularQ3()">
+   <br>
+   <div id="divAviso" style="background-color: antiquewhite;"></div>
+   <br>
+   <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+   <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+   <br>
+   <!-- <input type="button" value="Listar" onclick="listar()">
+    <br><br> -->
+
+   <div id="outputSaida" style="background-color: aqua;">...</div>
+
+   <script src="./per.js"></script>
+   <script src="./perControle.js"></script>
+</body>
+
+</html>

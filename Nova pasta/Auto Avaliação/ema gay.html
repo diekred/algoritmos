@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="in">Número Inicial</label>
+    <input type="number" name="in" id="in">
+    <br>
+    <label for="fm">Número Final</label>
+    <input type="number" name="fm" id="fm">
+    <br>
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <br>
+    <label for="resultado">Resposta:</label>
+    <span id="resultado"></span>
+    <script>
+        function Calcular() {
+            let i = parseInt(document.getElementById("in").value);
+            let f = parseInt(document.getElementById("fm").value);
+            let y = 0;
+            let r = ""; 
+            for (let x = i; x<=f; x++){
+                y = x**2;
+                r += x + ";" + y + "<br>";
+            }
+            document.getElementById("resultado").innerHTML = r;
+        }
+    </script>
+</body>
+
+</html>

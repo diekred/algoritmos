@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nu">Digite um número:</label>
+    <input type="number" name="nu" id="nu">
+    <br>
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <br>
+    <label for="resultado">Resultado:</label>
+    <span id="resultado">00</span>
+    <script>
+        function Calcular(){
+        let nu = parseFloat(document.getElementById("nu").value);
+        nu = nu**2
+    document.getElementById("resultado").textContent = nu;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num"></label>
+    <input type="number" name="num" id="num">
+    <br>
+
+    <input type="button" value="cal" onclick="calcu()">
+
+    <label for="resp">Resposta:</label>
+    <span id="resp">00</span>
+    <br>
+
+    <script>
+        function calcu(){
+            let n = parseFloat(document.getElementById("num").value);
+            let respos = n ** (1/4);  // IMPORTANTE <=============
+            let re = respos.toFixed(2);
+            document.getElementById("resp").textContent = re
+        }
+
+    </script>
+</body>
+</html>

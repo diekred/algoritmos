@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nu">Total da Conta:</label>
+    <input type="number" name="nu" id="nu">
+    <br>
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <br>
+    <label for="resultado">Total a Pagar:</label>
+    <span id="resultado">00</span>
+    <script>
+        function Calcular(){
+            let co = parseFloat(document.getElementById("nu").value);
+            let pag = co + (0.1*co);
+        document.getElementById("resultado").textContent = pag;
+        }
+    </script>
+</body>
+</html>

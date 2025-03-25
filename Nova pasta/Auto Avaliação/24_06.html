@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="te" id="te">
+    <br>
+    <input type="button" value="calcular" onclick="Calcular()">
+    <br>
+    <span id="resultado"></span>
+    <span id="resultado2"></span>
+    <script>
+        function Calcular() {
+            let t = document.getElementById("te").value;
+            let tt = "";
+            let v = "";
+            let c = "";
+            for (let i = 0; i < t.length; i++) {
+                tt = t[i]
+                if (tt == "a" || tt == "e" || tt == "i" || tt == "o" || tt == "u" || tt == "A" || tt == "E" || tt == "I" || tt == "O" || tt == "U" ) {
+                    v = v+tt
+                }
+                else {
+                    c = c+tt
+                }
+            }
+            document.getElementById("resultado").textContent = v
+            document.getElementById("resultado2").textContent = c
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Idade">Idade da pessoa:</label>
+    <input type="number" name="Idade" id="Idade">
+    <br>
+
+    <input type="button" value="Idade" onclick="calcular()">
+    <br>
+
+    <label for="resultado">Categoria:</label>
+    <span id="resultado"></span>
+    <br>
+
+    <script>
+        function calcular() {
+            let Idade = parseFloat(document.getElementById("Idade").value);
+            let resultad = "";
+            if (Idade<=12) {
+                resultad = "Criança";}
+            else if (Idade<=17) {
+                resultad = "Adolescente";}
+            else if (Idade<=29) {
+                resultad = "Jovem Adulto";}
+            else if (Idade<=59) {
+                resultad = "Adulto"; }
+            else {
+                resultad = "Idoso";}
+            document.getElementById("resultado").textContent = resultad;
+        }
+    </script>
+</body>
+</html>

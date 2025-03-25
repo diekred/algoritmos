@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="tete">Frase:</label>
+    <input type="text" name="tete" id="tete">
+    <br>
+
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <br>
+
+    <label for="resposta">Resposta:</label>
+    <span id="resposta"></span>
+
+    <script>
+        function Calcular() {
+            let s = document.getElementById("tete").value;
+            let cont = 0;
+            for (let i = 0; i < s.length; i++) {
+                let l = s.charAt(i).toLowerCase();
+                if (l == "a" || l == "e" || l == "i" || l == "o" || l == "u") {
+                    cont = cont + 1;
+                }
+            }
+            document.getElementById("resposta").textContent = cont
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="inputString">Digite uma frase:</label>
+    <input type="text" id="inputString" placeholder="Digite aqui">
+    <button onclick="alternarMM()">Alternar</button>
+    <p id="outputString"></p>
+    <script>
+        function alternarMM() {
+            const inputString = document.getElementById('inputString').value;
+            let resultado = '';
+            for (let i = 0; i < inputString.length; i++) {
+                const char = inputString[i];
+                if (char === char.toUpperCase()){
+                    resultado += char.toLowerCase();
+                } else {
+                    resultado += char.toUpperCase();
+                }
+            }
+            document.getElementById('outputString').innerText = resultado
+        }
+    </script>
+</body>
+
+</html>

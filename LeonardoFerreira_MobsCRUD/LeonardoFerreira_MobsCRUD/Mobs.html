@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CRUD MOBS</title>
+   <link rel="stylesheet" href="Mobs">
+</head>
+
+<body>
+
+   <h1>Cadastro de Mobs</h1>
+   <br> <br>
+   <label for="inputId">Id:</label>
+   <input type="number" name="inputId" id="inputId">
+   <input type="button" value="Procure" id="btProcure" onclick="procure()" style="display:inline;">
+   <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+   <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+   <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+   <br><br>
+
+   <label for="inputNome">Nome do Mob:</label>
+   <input type="text" name="inputNome" id="inputNome">
+   <br>
+   <label for="inputComportamento">Comportamento do Mob:</label>
+   <select name="inputComportamento" id="inputComportamento">
+   <option value="Passivo">Passivo</option>
+   <option value="Passivo/Agressivo">Passivo/Agressivo</option>
+   <option value="Agresivo">Agressivo</option> </select>
+   <br>
+   <label for="inputDataLancamento">Data de Lançamento:</label>
+   <input type="date" name="inputDataLancamento" id="inputDataLancamento">
+   <br>
+   <label for="inputHp">HP do Mob:</label>
+   <input type="number" name="inputHp" id="inputHp">
+   <br>
+   <label for="inputAltura">Altura do Mob:</label>
+   <input type="number" name="inputAltura" id="inputAltura">
+   <br>
+   <br>
+   <input type="button" value="Salvar dados da lista" id="btSalvarPer" onclick="prepararESalvarCSV()" style="display:inline;">
+   <input type="button" value="Adicionar dados na lista" id="btAdicionarPer" onclick="abrirArquivoSalvoEmLocalPermanente()" style="display:inline;">
+   <br><br>
+   <div id="divAviso" style="background-color: antiquewhite;"></div>
+   <br>
+   <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+   <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+   <br>
+   <!-- <input type="button" value="Listar" onclick="listar()">
+    <br><br> -->
+
+   <div id="outputSaida" style="background-color: aqua;">...</div>
+
+   <script src="./Mobs.js"></script>
+   <script src="./MobsControle.js"></script>
+</body>
+
+</html>

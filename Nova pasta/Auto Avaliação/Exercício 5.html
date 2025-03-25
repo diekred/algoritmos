@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homer Simpson</title>
+</head>
+
+<body>
+    <label for="mes">Mês:</label>
+    <select name="mes" id="mes">
+        <option value="jan">Janeiro</option>
+        <option value="fev">Fevereiro</option>
+        <option value="mar">Março</option>
+        <option value="abr">Abril</option>
+        <option value="mai">Maio</option>
+        <option value="jun">Junho</option>
+        <option value="jul">Julho</option>
+        <option value="ags">Agosto</option>
+        <option value="set">Setembro</option>
+        <option value="out">Outubro</option>
+        <option value="nov">Novembro</option>
+        <option value="dez">Dezembro</option>
+    </select>
+    <br>
+
+    <label for="ano">Ano:</label>
+    <input type="text" name="ano" id="ano">
+    <br>
+
+    <input type="button" value="Calcular" onclick="rosca()">
+    <br>
+
+    <label for="resp">Resultado de rosca no mês:</label>
+    <span id="resp"></span>
+
+    <script>
+        function rosca() {
+            let mes = document.getSelection("mes").value;
+            let ano = parseInt(document.getElementById("ano").value);
+            let rosquinhas = 0;
+            let diasTotal = 0;
+            if (mes == "jan" || mes == "mar" || mes == "mai" || mes == "jul" || mes == "ags" || mes == "out" || mes == "dez") {
+                diasTotal = 31;
+                rosquinhas = 8;
+            }
+            else if (mes == "fev") {
+                if (ano % 4 == 0) {
+                    diasTotal = 29;
+                    rosquinhas = 9;
+                }
+                else {
+                    diasTotal = 28;
+                    rosquinhas = 7;
+                }
+            }
+
+            else {
+                diasTotal = 30;
+                rosquinhas = 6;
+            }
+            let diasImpares = Math.ceil(diasTotal / 2);
+            let comeu = diasImpares * rosquinhas;
+
+            document.getElementById("resp").textContent = "Homer comeu " + comeu + " rosquinhas no mês " + mes + " do ano " + ano;
+        }
+    </script>
+</body>
+
+</html>

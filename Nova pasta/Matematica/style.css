@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(20, 98, 9) 100%);
+  padding: 20px; /* Adiciona um padding para telas menores */
+}
+
+main {
+  background-color: #fff7f7;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid;
+  border-color: black;
+  width: 100%;
+  max-width: 600px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.spnQtd {
+  text-align: end;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+button {
+  width: 100%;
+  text-align: start;
+  padding: 5px;
+  border: solid;
+  border-color: rgb(20, 98, 9);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  border-color: black;
+  background-color: rgb(20, 98, 9);
+  color: black;
+}
+
+.finish {
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.finish button {
+  text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  main {
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  body {
+    padding: 10px;
+  }
+
+  .answers button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .spnQtd {
+    font-size: 14px;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .answers button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

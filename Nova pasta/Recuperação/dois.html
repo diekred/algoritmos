@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nu">Cateto A:</label>
+    <input type="number" name="nu" id="nu">
+    <br>
+    <label for="num">Cateto B:</label>
+    <input type="number" name="num" id="num">
+    <br>
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <br>
+    <label for="resultado">Cateto C:</label>
+    <span id="resultado">00</span>
+    <script>
+        function Calcular(){
+        let A = parseFloat(document.getElementById("nu").value);
+        let B = parseFloat(document.getElementById("num").value);
+        let C = Math.sqrt((A**2) + (B**2)).toFixed(2);
+    document.getElementById("resultado").textContent = C;
+        }
+    </script>
+</body>
+</html>

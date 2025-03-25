@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+</head>
+<body>
+    <label for="Preco_etqueta">Preço da etqueta</label>
+    <input type="number" name="Preco_etqueta" id="Preco_etqueta">
+    <br>
+    
+    <input type="button" value="A vista ou em cheque" onclick="PagA()">
+    <br>
+    <input type="button" value="A vista no cartão de credito" onclick="PagB()">
+    <br>
+    <input type="button" value="Parcelado em 2 vezes" onclick="PagC()">
+    <br>
+    <input type="button" value="Parcelado em 3 vezes" onclick="PagD()">
+    <br>
+
+    <label for="ValorFinal">Valor final:</label>
+    <span id="ValorFinal">00</span>
+
+    <script>
+        function PagA() {
+            let valor = parseFloat(document.getElementById("Preco_etqueta").value);
+            let Resp1 = valor - (0.15*valor);
+            document.getElementById("ValorFinal").textContent = Resp1;
+        }
+
+        function PagB() {
+            let valor = parseFloat(document.getElementById("Preco_etqueta").value);
+            let Resp2 = valor - (0.1*valor);
+            document.getElementById("ValorFinal").textContent = Resp2;
+        }
+
+        function PagC() {
+            let valor = parseFloat(document.getElementById("Preco_etqueta").value);
+            let Resp3 = valor/2
+            document.getElementById("ValorFinal").textContent ="2 vezes de " + Resp3;
+        }
+
+        function PagD() {
+            let valor = parseFloat(document.getElementById("Preco_etqueta").value);
+            let Resp4 = (valor + (0.05*valor))/3;
+            document.getElementById("ValorFinal").textContent ="3 vezes de " + Resp4;
+        }
+    </script>
+</body>
+</html>

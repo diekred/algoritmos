@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Semana</title>
+</head>
+<body>
+    <label for="DS">Dia da Semana(De 1 à 7)</label>
+    <input type="number" name="DS" id="DS" min="1" max="7">
+    <br>
+
+    <input type="button" value="Exibir" onclick="exibir()">
+    <br>
+
+    <label for="Resultado">O dia escolhido foi:</label>
+    <span id="Resultado"></span>
+    <br>
+
+    <script>
+        function exibir(){
+        const dia = parseFloat(document.getElementById("DS").value);
+        let resultado = "";//reserve na memória ram um local para guardar uma string chamado resultado
+        if(dia==1) {
+           resultado = "Domingo";
+        } else if (dia==2) {
+            resultado = "Segunda";
+        } else if (dia==3) {
+            resultado = "Terça";
+        } else if (dia==4) {
+            resultado = "Quarta";
+        } else if (dia==5) {
+            resultado = "Quinta";
+        } else if (dia==6) {
+            resultado = "Sexta";
+        } else {
+            resultado = "Sábado";
+        }
+        document.getElementById("Resultado").textContent = resultado;
+        }
+    </script>
+</body>
+</html>

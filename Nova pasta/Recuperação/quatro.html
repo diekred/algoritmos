@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nu">Graus Celsius:</label>
+    <input type="number" name="nu" id="nu">
+    <br>
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <br>
+    <label for="resultado">Graus Fahrenheit:</label>
+    <span id="resultado">00</span>
+    <script>
+        function Calcular(){
+            let C = parseFloat(document.getElementById("nu").value);
+            let F = (C * (9/5)) + 32;
+        document.getElementById("resultado").textContent = F;
+        }
+    </script>
+</body>
+</html>

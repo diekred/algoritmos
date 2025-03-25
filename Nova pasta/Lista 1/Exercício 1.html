@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Bimestre1">Nota do primeiro bimesre</label>
+    <input type="text" name="Bimestre1" id="Bimestre1">
+    <br>
+
+    <label for="Bimestre2">Nota do segundo bimestre</label>
+    <input type="text" name="Bimestre2" id="Bimestre2">
+    <br>
+
+    <label for="Bimestre3">Nota do terceiro bimestre</label>
+    <input type="text" name="Bimestre3" id="Bimestre3">
+    <br>
+
+    <label for="Bimestre4">Nota do quarto bimestre</label>
+    <input type="text" name="Bimestre4" id="Bimestre4">
+    <br>
+
+    <input type="button" value="Calcular" onclick="CM()">
+    <br>
+
+    <label for="MediaFinal">Média Final:</label>
+    <span id="MediaFinal">00</span>
+
+    <script>
+        function CM() {
+            let B1 = parseFloat(document.getElementById("Bimestre1").value);
+            let B2 = parseFloat(document.getElementById("Bimestre2").value);
+            let B3 = parseFloat(document.getElementById("Bimestre3").value);
+            let B4 = parseFloat(document.getElementById("Bimestre4").value);
+            let MF = (B1 + B2 + B3 + B4)/4;
+            document.getElementById("MediaFinal").innerHTML = MF;
+        }
+    </script>
+</body>
+</html>

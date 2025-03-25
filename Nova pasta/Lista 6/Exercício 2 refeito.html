@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="PrecoEtqueta">Preço da etqueta</label>
+    <input type="number" name="PrecoEtqueta" id="PrecoEtqueta">
+    <br>
+
+    <input type="button" value="A vista ou em cheque" onclick="Opc1()">
+    <br>
+    <input type="button" value="A vista no cartão de credito" onclick="Opc2()">
+    <br>
+    <input type="button" value="Parcelado em 2 vezes" onclick="Opc3()">
+    <br>
+    <input type="button" value="Parcelado em 3 vezes" onclick="Opc4()">
+    <br>
+
+    <label for="PrecoFinal">Preço Final:</label>
+    <span id="PrecoFinal">00</span>
+
+    <script>
+        function Opc1() {
+            let Valor = parseFloat(document.getElementById("PrecoEtqueta").value);
+            let Resp = Valor - (15/100*Valor);
+            document.getElementById("PrecoFinal").textContent = Resp
+        }
+        function Opc2() {
+            let Valor = parseFloat(document.getElementById("PrecoEtqueta").value);
+            let Resp = Valor - (10/100*Valor);
+            document.getElementById("PrecoFinal").textContent = Resp
+        }
+        function Opc3() {
+            let Valor = parseFloat(document.getElementById("PrecoEtqueta").value);
+            let Resp = Valor/2
+            document.getElementById("PrecoFinal").textContent ="2 vezes de " + Resp
+            
+        }
+        function Opc4() {
+            let Valor = parseFloat(document.getElementById("PrecoEtqueta").value);
+            let Resp = (Valor + (5/100*Valor))/3;
+            document.getElementById("PrecoFinal").textContent ="3 vezes de " + Resp
+        }
+    </script>
+
+</body>
+</html>
